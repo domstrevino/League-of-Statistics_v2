@@ -1,0 +1,80 @@
+﻿@page
+@model WebScraper2._0.Pages.ProfileModel
+@{
+    ViewData["Title"] = "Profile page";
+}
+
+
+<p><Label class = "ProfileUsername" id = "ProfileUsername">@IndexModel.Username</Label></p>
+<p><Label class = "ProfileLevel" id = "ProfileLevel">Level: @IndexModel.Level</Label></p>
+<p><Label class = "ProfileRegion" id = "ProfileRegion">Region: @IndexModel.LadderRank</Label></p>
+
+<div>
+    <fieldset class = "Champions">
+        <legend>Top Champions</legend>
+        <table id = "Champs">
+            <!--1st champ-->
+            <tr>
+                <td class = "col1">
+                    <label class = "FirstChamp">1. @IndexModel.FirstChamp</label>
+                </td>
+                <td class = "col2">
+                    <label class = "FirstWinrate">@IndexModel.FirstWR</label>
+                </td>
+                <td class = "col3">
+                    <label class = "FirstKDA">@IndexModel.FirstKDA</label>
+                </td>
+            </tr>
+            <!--2nd champ-->
+            <tr>
+                <td class = "col1">
+                    <label class = "SecondChamp">2. @IndexModel.SecondChamp:</label>
+                </td>
+
+                <td class = "col2">
+                    <label class = "SecondWinrate">@IndexModel.SecondWR</label>
+                </td>
+                <td class = "col3">
+                    <label class = "SecondKDA">@IndexModel.SecondKDA</label>
+                </td>
+            </tr>
+            <!--3rd champ-->
+            <tr>
+                <td class = "col1">
+                    <label class = "ThirdChamp">3. @IndexModel.ThirdChamp:</label>
+                </td>
+                <td class = "col2">
+                    <label class = "ThirdWinrate">@IndexModel.ThirdWR</label>
+                </td>
+                <td class = "col3">
+                    <label class = "ThirdKDA">@IndexModel.ThirdKDA</label>
+                </td>
+            </tr>
+        </table>    
+    </fieldset>
+</div>
+
+<div class = "RankedBoxes">
+    <div class = "RankedBoxes1">
+        <fieldset class = "SoloDuo">
+            <legend>Solo/Duo</legend>
+
+            <p>Solo/Duo: @IndexModel.SoloDuoRank</p>
+            <p>@IndexModel.SoloDuoGames</p>
+            <p>@IndexModel.SoloDuoWins</p>
+
+        </fieldset>
+    </div>
+
+    <div class = RankedBoxes1>
+        <fieldset class = "Flex">
+            <legend>Flex</legend>
+
+            <p>Flex: @IndexModel.FlexRank</p>
+            <p>@IndexModel.FlexGames</p>
+            <p>@IndexModel.FlexWins</p>
+    
+        </fieldset>
+    </div>
+</div>
+

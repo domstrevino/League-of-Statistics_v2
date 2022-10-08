@@ -1,0 +1,9 @@
+﻿@page
+@model WebScraper2._0.Pages.OverviewModel
+@{
+}
+<h4 style = "color: white;">Overview Page</h4>
+<p style = "color: white;">Click the button to open a full, comprehensive overview of yourself!</p>
+<a href = '@string.Format("https://u.gg/lol/profile/{0}1/{1}/overview", @IndexModel.Region, @IndexModel.newUsername)' target = "_blank">
+    <input class = "newPage" type = "submit" value = "Click Me!" />
+</a>

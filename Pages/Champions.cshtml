@@ -1,0 +1,64 @@
+﻿@page 
+@model WebScraper2._0.ChampionsModel
+@{
+    ViewData["Title"] = "Champions page";
+}
+<div class = "ChampionsWelcome">
+    <h1 class = "display-4">Champions</h1>
+</div>
+
+<form asp-page-handler = "Update" method = "post">
+
+    <div class = "ChampionsList">
+        <div class = ChampionBoxes>
+            <select name = "ChampionsListBox" size = "20" style = "width: 200px">
+                @if (@IndexModel.champions != null)
+                {
+                    @foreach (string ChampionName in @IndexModel.champions)
+                    {
+                        <option value = "@ChampionName">@ChampionName</option>
+                    }
+                }
+            </select>
+        </div>
+
+        <div class = "ChampionBoxes">
+            @if (@ChampionsModel.NameValue != null) 
+            { 
+                <h3 style = "color: white;">@ChampionsModel.NameValue</h3>
+            }
+            else
+            {
+                <h3>&nbsp;</h3>
+            }
+            @if (@ChampionsModel.ChampSurname != null) 
+            { 
+                <h6 style = "color: grey;">@ChampionsModel.ChampSurname</h6>
+            }
+            else
+            {
+                <h6>&nbsp;</h6>
+            }
+
+            <fieldset class = "abilitiesFieldset">
+                <legend style = "color: white;">Abilities</legend>
+
+                <!--Q Ability-->
+                <p><label for = "QAbility" class = "ButtonAbility" style = "color: white; padding-right: 5px;">Q:</label><input class = "AbilityText" id = "QAbility" type = "text" readonly = "readonly" value = "@ChampionsModel.QTextBox" placeholder = "Q Ability..."/></p>
+
+                <!--W Ability-->
+                <p><label for = "WAbility" class = "ButtonAbility" style = "color: white; padding-right: 5px;">W:</label><input class = "AbilityText" id = "WAbility" type = "text" readonly = "readonly" value = "@ChampionsModel.WTextBox" placeholder = "W Ability..."/></p>
+
+                <!--E Ability-->
+                <p><label for = "EAbility" class = "ButtonAbility" style = "color: white; padding-right: 5px;">E:</label><input class = "AbilityText" id = "EAbility" type = "text" readonly = "readonly" value = "@ChampionsModel.ETextBox" placeholder = "E Ability..."/></p>
+
+                <!--R Ability-->
+                <p><label for = "RAbility" class = "ButtonAbility" style = "color: white; padding-right: 5px;">R:</label><input class = "AbilityText" id = "RAbility" type = "text" readonly = "readonly" value = "@ChampionsModel.RTextBox" placeholder = "R Ability..."/></p>
+            </fieldset>
+            <div>
+                <input type = "submit" style = "margin-top: 20px;" value = "View" />
+            </div>
+            
+        </div>
+    </div>
+</form>
