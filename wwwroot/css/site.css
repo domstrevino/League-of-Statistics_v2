@@ -1,0 +1,235 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: #2E3349;
+}
+
+label {
+    padding-left: 5px;
+}
+
+fieldset {
+    border: 0.5px solid white;
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+}
+legend {
+    font-size: 15px;
+    float: none;
+    width: auto;
+    margin-left: 10px;
+    margin-right: auto;
+}
+
+/*Index page*/
+.siteName {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    width: 400px;
+    color: white;
+}
+.Fields {
+    display: block;
+    
+}
+.UserRegion {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    width: 570px;
+    padding-right: 5px;
+    color: white;
+}
+.UserTextBox {
+    position: absolute;
+    left: 50%;
+    top: 48%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    width: 570px;
+    border: 0px solid white;
+}
+.SubmitButton {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    
+    background-color: darkgrey;
+    border: 0px solid white;
+    width: 75px;
+}
+.ErrorMessageNoInput {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    color: red;
+}
+.ErrorMessageNoRegion {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    color: red;
+}
+.ErrorMessageNoUsername {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    color: red;
+}
+.ErrorMessageNoUser {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    color: red;
+}
+
+/*home page*/
+.HomeWelcome {
+    color: white;
+}
+
+/*profile page*/
+.ProfileUsername {
+    color: white;
+    font-size: 50px;
+}
+.ProfileLevel {
+    color: white;
+    font-size: 20px;
+}
+.ProfileRegion {
+    color: white;
+    font-size: 20px;
+}
+.Champions {
+    float: left;
+
+    color: white;
+    width: 500px;
+    height: fit-content;
+    text-align: left;
+    padding-left: 5px;
+}
+.RankedBoxes1 {
+    float: left;
+    width: 25%;
+}
+.RankedBoxes {
+    clear: both;
+    float: left;
+    width: 75%;
+}
+#Champs {
+    width: 100%;
+}
+#Champs td.col1 {
+    position: absolute;
+    width: 30%;
+    padding: 5px 25px 5px 15px;
+}
+
+#Champs td.col2 {
+    position: relative;
+    width: 35%;
+    padding: 5px 25px 5px 25px;
+}
+
+#Champs td.col3 {
+    position: relative;
+    width: 35%;
+    padding: 5px 10px 5px 35px;
+}
+.SoloDuo {
+    color: white;
+    width: 225px;
+    height: fit-content;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.Flex {
+    color: white;
+    width: 225px;
+    height: fit-content;
+    text-align: left;
+    padding-left: 5px;
+}
+
+/*champions page*/
+.ChampionsWelcome {
+    color: white;
+}
+.ChampionsList {
+    margin: auto;
+
+    position: absolute;
+    top: 20%;
+    bottom: 50%;
+}
+.ChampionBoxes {
+    float: left;
+    padding-right: 200px;
+    top: 90%;
+}
+.ChampionsListBox {
+    color: white;
+}
+.abilitiesFieldset {
+    width: 400px;
+}
+.ButtonAbility {
+    color: white;
+    margin-left: 10px;
+}
+.AbilityText {
+    float: right;
+    margin-right: 20px;
+    width: 80%;
+}
+
+/*overview page*/
+.newPage {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
