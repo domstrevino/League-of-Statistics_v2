@@ -24,7 +24,6 @@ footer {
 label {
     padding-left: 5px;
 }
-
 fieldset {
     border: 0.5px solid white;
     height: fit-content;
@@ -53,35 +52,9 @@ legend {
     justify-content: center;
 }
 
-.fields {
-
+.ms-n5 {
+    margin-left: -40px;
 }
-
-/*.region {
-    color: white;
-}
-
-.user-input {
-    display: flex;
-    align-items: center;
-
-    flex-direction: column;
-
-    margin-top: 2rem;
-}
-
-.UserTextBox {
-    width: 25%;
-    border: 0px solid white;
-}
-
-.SubmitButton {
-    width: 5rem;
-
-    background-color: darkgrey;
-    border: 0px solid white;
-    
-}*/
 
 
 
