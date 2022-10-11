@@ -8,56 +8,55 @@
 </div>
 
 <form method = "POST">
-    <div class = "fields">
-        <!--User's Region fieldset-->
-        @*<fieldset class = "region">
-            <legend>Region</legend> 
-            <!--North America-->
-            <label for = "checkNA">NA</label>
-            <input type = "checkbox" name = "UserRegion" value = "na">
-            <!--Europe West-->
-            <label for = "checkEUW">EUW</label>
-            <input type = "checkbox" name = "UserRegion" value = "euw">
-            <!--Europe Nordic & East-->
-            <label for = "checkEUNE">EUNE</label>
-            <input type = "checkbox" name = "UserRegion" value = "eune">
-            <!--Korean-->
-            <label for = "checkKR">KR</label>
-            <input type = "checkbox" name = "UserRegion" value = "kr">
-            <!--Brazil-->
-            <label for = "checkBR">BR</label>
-            <input type = "checkbox" name = "UserRegion" value = "br">
-            <!--Japan-->
-            <label for = "checkJP">JP</label>
-            <input type = "checkbox" name = "UserRegion" value = "jp">
-            <!--Russia-->
-            <label for = "checkRU">RU</label>
-            <input type = "checkbox" name = "UserRegion" value = "ru">
-            <!--Oceania-->
-            <label for = "checkOCE">OCE</label>
-            <input type = "checkbox" name = "UserRegion" value = "oce">
-            <!--Turkey-->
-            <label for = "checkTR">TR</label>
-            <input type = "checkbox" name = "UserRegion" value = "tr">
-            <!--Latin America North-->
-            <label for = "checkLAN">LAN</label>
-            <input type = "checkbox" name = "UserRegion" value = "lan">
-            <!--Latin America South-->
-            <label for = "checkLAS">LAS</label>
-            <input type = "checkbox" name = "UserRegion" value = "las">
-        </fieldset>*@
+    <div class = "input-group mb-3">
+        <div class = "input-group-prepend">
+            <div class = "dropdown">
+                <button type = "button" class = "btn btn-primary dropdown-toggle" id = "dropdownMenuButton" data-toggle = "dropdown" aria-haspopup = "true" aria-expanded = "false">
+                    Region
+                </button>
+                <div class = "dropdown-menu" aria-labelledby = "dropdownMenuButton">
+                    <a class = "dropdown-item" href = "#">North America (NA)</a>
+                    <a class = "dropdown-item" href = "#">Europe - West (EUW)</a>
+                    <a class = "dropdown-item" href = "#">Europe - Nordic & East (EUNE)</a>
+                    <a class = "dropdown-item" href = "#">Korea (KR)</a>
+                    <a class = "dropdown-item" href = "#">Brazil (BR)</a>
+                    <a class = "dropdown-item" href = "#">Japan (JP)</a>
+                    <a class = "dropdown-item" href = "#">Russia (RU)</a>
+                    <a class = "dropdown-item" href = "#">Oceania (OCE)</a>
+                    <a class = "dropdown-item" href = "#">Turkey (TR)</a>
+                    <a class = "dropdown-item" href = "#">Latin America - North (LAN)</a>
+                    <a class = "dropdown-item" href = "#">Latin America - South (LAS)</a>
+                </div>
+            </div>
+        </div>
+        <input type = "text" class = "form-control" placeholder = "Username" aria-label = "Username" aria-describedby = "dropdownMenuButton" />
+        <span class = "bi bi-search"></span>
 
-        @*<div class= "user-input">
-            <!--Username Textbox-->
-            <input class = "UserTextBox" type = "text" name = "UserName" placeholder = "Username..."/>
-                
-            <!--Submit Button-->
-            <input class = "SubmitButton" type = "submit" value = "Search" />
-        </div>*@
+
+        <div class = "input-group-append">
+            <button type = "submit" class = "input-group-addon" style="background-color: white;">
+                <svg xmlns = "http://www.w3.org/2000/svg" width = "1.5rem" height = "1.5rem" fill = "currentColor" class = "bi bi-search" viewBox = "0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+            </button>
+        </div>
     </div>
 </form>
 
-<!--Nothing entered-->
+@*<div class= "user-input">
+        <!--Username Textbox-->
+        <input class = "UserTextBox" type = "text" name = "UserName" placeholder = "Username..."/>
+
+        <!--Submit Button-->
+        <input class = "SubmitButton" type = "submit" value = "Search" />
+    </div>*@
+
+    @*<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                </svg>*@
+
+
+@*<!--Nothing entered-->
 <label class = "ErrorMessageNoInput" id = "ErrorMsgNoInput" name = "ErrorMsg">@Model.NoInputMessage</label>
 
 <!--No region entered-->
@@ -67,4 +66,4 @@
 <label class = "ErrorMessageNoUsername" id = "ErrorMsgNoUsername" name = "ErrorMsg">@Model.NoUsernameMessage</label>
 
 <!--User doesn't exist-->
-<label class = "ErrorMessageNoUser" id = "ErrorMsgNoUser" name = "ErrorMsg">@Model.NoUserMessage</label>
+<label class = "ErrorMessageNoUser" id = "ErrorMsgNoUser" name = "ErrorMsg">@Model.NoUserMessage</label>*@
