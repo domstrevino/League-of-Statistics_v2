@@ -1,21 +1,24 @@
 html {
-  font-size: 14px;
+    position: relative;
+    min-height: 100%;
+    font-size: 14px;
+}
+body {
+    background-color: #2E3349;
+    height: calc(100vh - 2rem);
+    width: 100%;
+    display: table;
+    border-collapse: collapse;
+}
+footer {
+    display: table-row;
+    height: 0;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  margin-bottom: 60px;
-  background-color: #2E3349;
+    html {
+        font-size: 16px;
+    }
 }
 
 label {
@@ -36,54 +39,55 @@ legend {
     margin-right: auto;
 }
 
+
+
+
 /*Index page*/
-.siteName {
-    position: absolute;
-    left: 50%;
-    top: 30%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+.site-header {
+    width: 100%;
+    margin: 0 auto;
 
-    width: 400px;
     color: white;
 }
-.Fields {
-    display: block;
-    
-}
-.UserRegion {
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+.site-name {
+    display: flex;
+    justify-content: center;
 
-    width: 570px;
-    padding-right: 5px;
+}
+
+.fields {
+
+}
+
+.region {
     color: white;
 }
+
+.user-input {
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+
+    margin-top: 2rem;
+}
+
 .UserTextBox {
-    position: absolute;
-    left: 50%;
-    top: 48%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-
-    width: 570px;
+    width: 25%;
     border: 0px solid white;
 }
-.SubmitButton {
-    position: absolute;
-    left: 50%;
-    top: 55%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
 
-    
+.SubmitButton {
+    width: 5rem;
+
     background-color: darkgrey;
     border: 0px solid white;
-    width: 75px;
+    
 }
+
+
+
+
 .ErrorMessageNoInput {
     position: absolute;
     left: 50%;

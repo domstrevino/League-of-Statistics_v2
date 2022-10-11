@@ -1,6 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 using HtmlAgilityPack;
 using System.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
+using System.Collections.Generic;
+using System;
+using System.Linq;
 
 namespace WebScraper2._0.Pages
 {

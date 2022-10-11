@@ -3,22 +3,21 @@
 @{
     ViewData["Title"] = "Start page";
 }
-<div class = "siteName">
-    <h1 class="WebsiteName"><strong>League Scrape 2.0</strong></h1>
+<div class = "site-header">
+    <h1 class="site-name"><strong>League of Statistics</strong></h1>
 </div>
 
 <form method = "POST">
-    <div class = "Fields">
+    <div class = "fields">
         <!--User's Region fieldset-->
-        <fieldset class = "UserRegion">
+        @*<fieldset class = "region">
             <legend>Region</legend> 
-
             <!--North America-->
             <label for = "checkNA">NA</label>
             <input type = "checkbox" name = "UserRegion" value = "na">
             <!--Europe West-->
             <label for = "checkEUW">EUW</label>
-            <input type = "checkbox" name = "UserRegion"value = "euw">
+            <input type = "checkbox" name = "UserRegion" value = "euw">
             <!--Europe Nordic & East-->
             <label for = "checkEUNE">EUNE</label>
             <input type = "checkbox" name = "UserRegion" value = "eune">
@@ -46,25 +45,26 @@
             <!--Latin America South-->
             <label for = "checkLAS">LAS</label>
             <input type = "checkbox" name = "UserRegion" value = "las">
-        </fieldset>
+        </fieldset>*@
 
-        <!--Username Textbox-->
-        <input class = "UserTextBox" type = "text" name = "UserName" placeholder = "Username..."/>
+        @*<div class= "user-input">
+            <!--Username Textbox-->
+            <input class = "UserTextBox" type = "text" name = "UserName" placeholder = "Username..."/>
                 
-        <!--Submit Button-->
-        <input class = "SubmitButton" type = "submit" value = "Search" />
+            <!--Submit Button-->
+            <input class = "SubmitButton" type = "submit" value = "Search" />
+        </div>*@
     </div>
 </form>
 
-    <!--Nothing entered-->
-    <label class = "ErrorMessageNoInput" id = "ErrorMsgNoInput" name = "ErrorMsg">@Model.NoInputMessage</label>
+<!--Nothing entered-->
+<label class = "ErrorMessageNoInput" id = "ErrorMsgNoInput" name = "ErrorMsg">@Model.NoInputMessage</label>
 
-    <!--No region entered-->
-    <label class = "ErrorMessageNoRegion" id = "ErrorMsgNoRegion" name = "ErrorMsg">@Model.NoRegionMessage</label>
+<!--No region entered-->
+<label class = "ErrorMessageNoRegion" id = "ErrorMsgNoRegion" name = "ErrorMsg">@Model.NoRegionMessage</label>
 
-    <!--No username entered-->
-    <label class = "ErrorMessageNoUsername" id = "ErrorMsgNoUsername" name = "ErrorMsg">@Model.NoUsernameMessage</label>
+<!--No username entered-->
+<label class = "ErrorMessageNoUsername" id = "ErrorMsgNoUsername" name = "ErrorMsg">@Model.NoUsernameMessage</label>
 
-    <!--User doesn't exist-->
-    <label class = "ErrorMessageNoUser" id = "ErrorMsgNoUser" name = "ErrorMsg">@Model.NoUserMessage</label>
-
+<!--User doesn't exist-->
+<label class = "ErrorMessageNoUser" id = "ErrorMsgNoUser" name = "ErrorMsg">@Model.NoUserMessage</label>
