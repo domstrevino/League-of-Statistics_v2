@@ -31,10 +31,7 @@ namespace WebScraper2._0.Pages
         public static string? ThirdChamp, ThirdKDA, ThirdWR;
 
         //string variables for error messages
-        public string? NoInputMessage;
-        public string? NoRegionMessage;
-        public string? NoUsernameMessage;
-        public string? NoUserMessage;
+        public string? ErrorMessage = "";
 
         //list to populate ListBox in the ChampionsModel
         public static List<string>? champions;
@@ -42,50 +39,45 @@ namespace WebScraper2._0.Pages
         
         public void OnPost()
         {
-            //GetListBox();
-            //Username = Request.Form["UserName"];
-            Region = Request.Form["UserRegion"];
+            Region = Request.Form["region"];
+            Username = Request.Form["username"];
             
-            //bool tryAgain = true;
-            //while (tryAgain)
-            //{
-            //    try
-            //    {
-            //        CheckUser();
-
-            //        if (Region == null && Username == string.Empty)
-            //        {
-            //            NoInputMessage = "Please enter a region and a username";
-            //            tryAgain = false;
-            //        }
-            //        else if (Region == null)
-            //        {
-            //            NoRegionMessage = "Please enter a region.";
-            //            tryAgain = false;
-            //        }
-            //        else if (Username == string.Empty)
-            //        {
-            //            NoUsernameMessage = "Please enter a username.";
-            //            tryAgain = false;
-            //        }
-            //        else if (IsUser == false)
-            //        {
-            //            NoUserMessage = $"We couldn't find the summoner, \"{Username}\".\nDouble check your spelling or try a different region.";
-            //            tryAgain = false;
-            //        }
-            //        else
-            //        {
-            //            GetRankedStatistics();
-            //            Response.Redirect("/Home");
-
-            //            break;
-            //        }
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        throw new ApplicationException("Something went wrong while collecting the desired data. Please try again.", ex);
-            //    }
-            //}
+            bool valid_user = true;
+            while (valid_user)
+            {
+                try
+                {
+                    if (Region == null && Username == string.Empty)
+                    {
+                        ErrorMessage = "Please enter a region and a username";
+                        valid_user = false;
+                    }
+                    else if (Region == null)
+                    {
+                        ErrorMessage = "Please enter a region.";
+                        valid_user = false;
+                    }
+                    else if (Username == string.Empty)
+                    {
+                        ErrorMessage = "Please enter a username.";
+                        valid_user = false;
+                    }
+                    else if (IsUser == false)
+                    {
+                        ErrorMessage = $"We couldn't find the summoner, \"{Username}\".\nDouble check your spelling or try a different region.";
+                        valid_user = false;
+                    }
+                    else
+                    {
+                        Response.Redirect("/Home");
+                        break;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new ApplicationException("Something went wrong while collecting the desired data. Please try again.", ex);
+                }
+            }
         }
 
         //query database for champion names
