@@ -1,12 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
-using HtmlAgilityPack;
-using System.Data.SqlClient;
-using Microsoft.Extensions.Configuration;
-using System.Collections.Generic;
-using System;
-using System.Linq;
 
-namespace WebScraper2._0.Pages
+namespace League_of_Statistics.Pages
 {
     public class IndexModel : PageModel
     {
@@ -36,7 +30,7 @@ namespace WebScraper2._0.Pages
         //list to populate ListBox in the ChampionsModel
         public static List<string>? champions;
 
-        
+
         public void OnPost()
         {
             Region = Request.Form["region"];
@@ -91,7 +85,7 @@ namespace WebScraper2._0.Pages
         //check for user
         //static bool CheckSummoner()
         //{
-            
+
         //}
 
         //get profile statistics

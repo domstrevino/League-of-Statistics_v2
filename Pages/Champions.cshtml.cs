@@ -5,7 +5,7 @@ using System.Configuration;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Configuration;
 
-namespace WebScraper2._0
+namespace League_of_Statistics.Pages
 {
     public class ChampionsModel : PageModel
     {

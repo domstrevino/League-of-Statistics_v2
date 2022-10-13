@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace WebScraper2._0.Pages
+namespace League_of_Statistics.Pages
 {
     public class HomeModel : PageModel
     {
