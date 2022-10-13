@@ -74,6 +74,7 @@ legend {
     background-color: transparent !important;
 }
 .alert {
+    display: none;
     width: auto;
     max-width: calc(310px + 20rem);
     margin: 0 auto;
